@@ -6,25 +6,58 @@
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <section class="main">
-        <div class="content">
-            <h2>Hello, I am <br> <Span>Thato Nkale</Span> </h2>
-            <div class="animated-text">
-                <h3> Web Designer </h3>
-                <h3> Web Developer </h3>
-                <h3> raphic Editor </h3>
+    <nav id="desktop-nav">
+        <div class="logo">Thato Nkale</div>
+        <div>
+            <ul class="nav-links">
+                <li> <a href="#about">About</a> </li>
+                <li> <a href="#experience">Experience</a> </li>
+                <li> <a href="#projects">Projects</a> </li>
+                <li> <a href="#contact">Contact</a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Thato Nkale</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <a href="#" class="btn"> See my work </a>
-            <div class="media-icons">
-                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                <a href="#"> <i class="fab fa-instagram"></i> </a>
-                <a href="#"> <i class="fab fa-twitter"></i> </a>
+            <div class="menu-links">
+                <li> <a href="#about" onclick="toggleMenu()">About</a> </li>
+                <li> <a href="#experience" onclick="toggleMenu()">Experience</a> </li>
+                <li> <a href="#projects" onclick="toggleMenu()">Projects</a> </li>
+                <li> <a href="#contact" onclick="toggleMenu()">Contact</a> </li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./images/me-2.jpg" alt="Thato Nkale profile picture">
+        </div>
+
+        <div class="section__text">
+            <p class="section__text__p1"> Hello, I am </p>
+            <h1 class="title"> Thato Nkale </h1>
+            <p class="section__text__p2"> Frontend Deloper </p>
+            <div class="btn-controller">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Thato Nkale.pdf')"> Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href=('./#contact')"> Contact Info </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedIn.png" alt="LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/in/thato-nkale-8b05462aa' ">
+                <img src="./assets/GitHub.png" alt="GitHub profile" class="icon" onclick="location.href='https://github.com/T-nkale' ">
             </div>
         </div>
     </section>
 
-    <script src="script js" charset="UTF-8"></script>
+    <script src="script.js" charset="UTF-8"></script>
 </body>
 </html>
